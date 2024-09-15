@@ -1,44 +1,199 @@
-<!DOCTYPE html>
+PE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JORGEHELMER</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>JQHATU</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .banner {
+            background-image: url('https://wallpapers.com/images/hd/1600-x-900-black-epwwgnjhw0705rcx.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: rgb(229, 255, 0);
+            text-align: center;
+        }
+        .banner h1 {
+            font-size: 64px;
+            margin: 0;
+        }
+        .banner p {
+            font-size: 24px;
+            margin: 10px 0 20px;
+        }
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .search-bar {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .categories-select {
+            padding: 10px;
+            border-radius: 5px 0 0 5px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            outline: none;
+        }
+        .search-input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-left: none;
+            outline: none;
+        }
+        .search-button {
+            padding: 10px 20px;
+            border-radius: 0 5px 5px 0;
+            border: none;
+            background-color: #ff5733;
+            color: white;
+            cursor: pointer;
+        }
+        .search-button:hover {
+            background-color: #ff7733;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>CompraXPRESS</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/productos">Productos</a></li>
-                <li><a href="/contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="productos">
-            <h2>Productos Destacados</h2>
-            <div class="producto">
-                <img src="producto1.jpg" alt="Producto 1">
-                <h3>ARROZ</h3>
-                <p>Saco de arroz "Faraon".</p>
-                <p>Precio: $69.99</p>
-                <button>Añadir al Carrito</button>
+
+    <div class="banner">
+        <h1>BIENVENIDO A JQHATU</h1>
+        <p>Encuentra los mejores productos a precios increíbles</p>
+        
+        <!-- Barra de búsqueda con categorías -->
+        <div class="search-container">
+            <form class="search-bar" action="/buscar" method="GET">
+                <select class="categories-select" name="category">
+                    <option value="all">Todas las Categorías</option>
+                    <option value="ropa">Abarrotes</option>
+                    <option value="electronica">Electrónica</option>
+                </select>
+                <input type="text" class="search-input" name="query" placeholder="Buscar productos...">
+                <button type="submit" class="search-button">Buscar</button>
+            </form>
+        </div>
+    </div>
+</body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .products-section {
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 15px;
+        }
+        .product-title {
+            font-size: 20px;
+            margin: 0;
+            color: #333;
+        }
+        .product-description {
+            font-size: 14px;
+            color: #666;
+            margin: 10px 0;
+        }
+        .product-price {
+            font-size: 18px;
+            color: #ff5733;
+            margin: 10px 0;
+        }
+        .product-button {
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .product-button:hover {
+            background-color: #ff7733;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sección de Productos -->
+    <div class="products-section">
+        <h2 style="text-align: center; margin-bottom: 20px;">Nuestros Productos</h2>
+        <div class="products-container">
+            <!-- Producto 1 -->
+            <div class="product-card">
+                <img src="https://mercury.vtexassets.com/arquivos/ids/17016726/shp-28250-0.jpg?v=638464747614400000" alt="Producto 1" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">ARROZ FARAÓN</h3>
+                    <p class="product-description">Saco de arroz.</p>
+                    <p class="product-price">S/190.00</p>
+                    <a href="#" class="product-button">Ver Detalles</a>
+                </div>
             </div>
-            <div class="producto">
-                <img src="producto2.jpg" alt="Producto 2">
-                <h3>ARROZ</h3>
-                <p>Saco de arroz campero.</p>
-                <p>Precio: $69.99</p>
-                <button>Añadir al Carrito</button>
+            <!-- Producto 2 -->
+            <div class="product-card">
+                <img src="https://mundoabarrotes.com/wp-content/uploads/2020/12/Arroz-Campero-25-kg.webp" alt="Producto 2" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">ARROZ CAMPERO</h3>
+                    <p class="product-description">Saco de Arroz.</p>
+                    <p class="product-price">S/190.00</p>
+                    <a href="#" class="product-button">Ver Detalles</a>
+                </div>
             </div>
-            <!-- Agrega más productos según sea necesario -->
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 la mejor tienda gaaaaaaaa :3.</p>
-    </footer>
+            <!-- Producto 3 -->
+            <div class="product-card">
+                <img src="https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/tottusPE/43254709_1/w=1500,h=1500,fit=pad" alt="Producto 3" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">ARROZ PACASMAYO</h3>
+                    <p class="product-description">Saco de Arroz.</p>
+                    <p class="product-price">S/150.00</p>
+                    <a href="#" class="product-button">Ver Detalles</a>
+                </div>
+            </div>
+            <!-- Agrega más productos aquí -->
+        </div>
+    </div>
+
 </body>
 </html>
